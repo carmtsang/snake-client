@@ -7,14 +7,16 @@ const connect = () => {
     host: '10.0.2.15',
     port: 50541
   });
+  
+  conn.on('connect', () => {
+    console.log('Successfully connected to the game server')
+    conn.write('Name: CBT')
+  });
 
   conn.on('data', (data) => {
     console.log(data);
   });
 
-  conn.on('connect', () => {
-    console.log('Successfully connected to the game server')
-  });
   
   // interpret incoming data as text
   conn.setEncoding('utf8');
