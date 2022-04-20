@@ -1,3 +1,4 @@
+let connection;
 
 const setupInput = () => {
   const stdin = process.stdin;
@@ -5,13 +6,17 @@ const setupInput = () => {
   stdin.setEncoding('utf8');
   stdin.resume();
 
-  const handleUserInput = () => {
-    if ('\u0003') {
-      process.exit(); //exit out of game if ctl C is pressed
-    }
-  };
-  stdin.on('data', handleUserInput);
+  
+  stdin.on('data', handleUserInput)
+  
+
   return stdin;
+};
+
+const handleUserInput = function(key) {
+  if (key === '\u0003') {
+    process.exit(); //exit out of game if ctl C is pressed
+  }
 };
 
 module.exports = {
