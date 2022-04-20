@@ -13,24 +13,6 @@ const connect = () => {
     conn.write('Name: CBT');
   });
 
-  conn.on('connect', () => {
-    setTimeout(() => {
-      conn.write('Move: up')
-      setTimeout(() => {
-        conn.write('Move: left')
-      }, 50);
-    }, 50);
-  });
-
-  conn.on('connect', () => {
-    setTimeout(() => {
-      conn.write('Move: up')
-      setTimeout(() => {
-        conn.write('Move: left')
-      }, 50);
-    }, 50);
-  });
-
   conn.on('data', (data) => {
     console.log(data);
   });
