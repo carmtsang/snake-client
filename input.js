@@ -15,6 +15,8 @@ const setupInput = (conn) => {
 };
 
 const handleUserInput = key => {
+
+  //movement os the snake
   if (key === 'w') {
     connection.write("Move: up");
   } else if (key === 'a') {
@@ -23,9 +25,20 @@ const handleUserInput = key => {
     connection.write("Move: down");
   } else if (key === 'd') {
     connection.write("Move: right");
-  } else if (key === '\u0003') {
-    process.exit(); //exit out of game if ctl C is pressed
-  }
+  };
+  //exit out of game
+  if (key === '\u0003') {
+    process.exit();
+  };
+
+// keys for snake to talk
+  if (key === 'h') {
+    connection.write("Say: Hello")
+  } else if (key === 'o') {
+    connection.write("Say: Oh no!")
+  } else if (key === 'k') {
+    connection.write("Say: Omnomnom")
+  };
 };
 
 module.exports = {
