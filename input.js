@@ -19,13 +19,13 @@ const handleUserInput = key => {
     if (key === button) {
       return connection.write(KEY_MAPPING[button]);
     }
-  };
+  }
 
   //exit out of game
   if (key === '\u0003') {
     process.exit();
-  };
-}
+  }
+};
   
 module.exports = {
   setupInput
