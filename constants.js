@@ -4,12 +4,19 @@ const PORT = 50541;
 //keys
 const KEY_MAPPING = {
   w: "Move: up",
+  W: "Move: up",
+  A: "Move: left",
   a: "Move: left",
+  S: "Move: down",
   s: "Move: down",
+  D: "Move: right",
   d: "Move: right",
-  h: "Say: Hello",
+  H: "Say: So many sneks!",
+  h: "Say: So many sneks!",
+  O: "Say: Oh no!",
   o: "Say: Oh no!",
-  k: "Say: Omnomnom"
+  K: "Say: Om nom nom",
+  k: "Say: Om nom nom"
 };
 
 
